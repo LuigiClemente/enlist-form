@@ -11,6 +11,7 @@ import {
   import { useForm, Controller } from "react-hook-form";
   import 'react-phone-number-input/style.css';
   import PhoneInput from 'react-phone-number-input';
+import Image from "next/image";
   
   const Main = () => {
     const [showOtherField, setShowOtherField] = useState(false);
@@ -34,17 +35,17 @@ import {
       <div className="h-screen grid place-items-center bg-gray-50">
          <Card placeholder="" color="transparent" shadow={true} className="p-7 bg-white">
            <Typography placeholder="" variant="h4" color="blue-gray">
-            Hi 👋
+            <Image className="-ml-2" alt='logo' src={'/logo.webp'} width={150} height={70}></Image>
           </Typography>
            <Typography placeholder="" color="gray" className="mt-1 font-normal">
             Fill this form we really want to connect with you.
           </Typography>
           <br />
           <form
-            className="mb-4 w-[500px] grid grid-cols-2 gap-6"
+            className="mb-4 w-[95vw] max-w-[500px] grid grid-cols-2 gap-6"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div>
+            <div className="col-span-2">
               <Controller
                 name="firstName"
                 control={control}
@@ -62,7 +63,7 @@ import {
                 <span className="error-text">{errors?.firstName?.message}</span>
               )}
             </div>
-            <div>
+            <div className="col-span-2">
               <Controller
                 name="lastName"
                 control={control}
@@ -206,11 +207,9 @@ showOtherField && (
 
 
             </div>
-            <div className="col-span-2 grid grid-cols-2 gap-3">
-               <Button placeholder="" type="reset" variant="outlined" onClick={() =>reset()}>
-Reset
-</Button>
- <Button placeholder="" type="submit" color="blue" variant="filled">
+            <div className="col-span-2 grid grid-cols-1 gap-3">
+              
+ <Button placeholder="" color="black" type="submit" variant="filled">
 Submit
 </Button>
 </div>
