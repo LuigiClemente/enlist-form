@@ -1,4 +1,5 @@
-import { Main } from '@/components/main'
+
+import Main from '@/components/main';
 import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl';
 

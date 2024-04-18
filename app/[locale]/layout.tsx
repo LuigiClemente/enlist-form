@@ -1,5 +1,4 @@
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import '../../styles/extractedStyles.css';
 import '../../styles/globals.css';
 
 export default function LocaleLayout({
