@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 83" fill="none" class="CubeSchema_CubeSchema__svg--mobile__O_Rhn CubeSchema_CubeSchema__svg--mobile__O_Rhn-input">
+  <style>
+    .input-lines-7-mobile_svg__scheme-dash-animated path {
+       stroke-dashoffset: -1000;
+      animation: dash 40s linear infinite;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+  
+  <g class="input-lines-7-mobile_svg__scheme-dash-animated"  stroke="#169082" stroke-dasharray="0.24 5.6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" mask="url(#input-lines-7-mobile_svg__fade_1)">
+    <path stroke="transparent" d="M10 56V0"></path>
+    <path d="M124 81V62.074a16 16 0 00-12.436-15.598L28.436 27.482A16 16 0 0116 11.884V1"></path>
+    <path d="M136 81.08V55.708a20 20 0 00-13.856-19.033L74.85 21.437A16 16 0 0163.765 6.211V1"></path>
+    <path d="M148 81V49.028a24 24 0 00-13.769-21.71l-13.051-6.15A16 16 0 01112 6.694V1M160 80V0M172 81V49.028a24 24 0 0113.769-21.71l13.051-6.15A16 16 0 00208 6.694V1"></path>
+    <path d="M184.088 81.08V55.708a20 20 0 0113.856-19.033l47.206-15.238a16 16 0 0011.085-15.226V1"></path>
+    <path d="M196 81V62.074a16 16 0 0112.436-15.598l83.128-18.994A16 16 0 00304 11.884V1"></path>
+  </g>
+
+  <defs>
+    <linearGradient id="input-lines-7-mobile_svg__gradient_1" y2="1" x2="0">
+      <stop offset="0" stop-color="#fff"></stop>
+      <stop offset="0.8" stop-color="#fff"></stop>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+    </linearGradient>
+    <mask id="input-lines-7-mobile_svg__fade_1" maskContentUnits="objectBoundingBox">
+      <path fill="url(#input-lines-7-mobile_svg__gradient_1)" d="M0 0h2v1H0z"></path>
+    </mask>
+  </defs>
+</svg>

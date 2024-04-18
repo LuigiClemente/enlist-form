@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153 424" fill="none" class="CubeSchema_CubeSchema__svg--desktop__fDVWm">
+  <style>
+    .input-lines-7_svg__scheme-dash-animated path {
+      stroke-dashoffset: -1000;
+      animation: dash 40s linear infinite;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+  <g class="input-lines-7_svg__scheme-dash-animated" stroke="#169082" stroke-dasharray="0.24 5.6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" clip-path="url(#input-lines-7_svg__a)">
+    <path d="M153 212H1.383"></path>
+    <path d="M153 224H82.057a24 24 0 00-16.075 6.178L39.85 253.749a24 24 0 01-16.075 6.179H1" opacity="0.9"></path>
+    <path d="M153 236H93.844a24 24 0 00-19.969 10.687l-33.75 50.626A24 24 0 0120.155 308H1" opacity="0.6"></path>
+    <path d="M153 248h-48.503a24 24 0 00-21.872 14.12l-36.03 79.76A24 24 0 0124.725 356H1" opacity="0.4"></path>
+    <path d="M153 200H82.057a24 24 0 01-16.075-6.178L39.85 170.251a24 24 0 00-16.075-6.179H1" opacity="0.9"></path>
+    <path d="M153 188H93.844a24 24 0 01-19.969-10.687l-33.75-50.626A24 24 0 0020.155 116H1" opacity="0.6"></path>
+    <path d="M153 176h-48.503a24 24 0 01-21.872-14.12l-36.03-79.76A24 24 0 0024.725 68H1" opacity="0.4"></path>
+  </g>
+  <defs>
+    <clipPath id="input-lines-7_svg__a">
+      <path fill="#fff" d="M0 0h153v424H0z"></path>
+    </clipPath>
+  </defs>
+</svg>

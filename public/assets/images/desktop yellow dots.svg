@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 424" fill="none" class="CubeSchema_CubeSchema__svg--desktop__fDVWm">
+  <style>
+    .output-lines-3-curved_svg__scheme-dash-animated path {
+      stroke-dashoffset: 200; /* Adjusted the value to ensure animation starts from the beginning */
+      animation: dash 18s linear infinite;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+  
+  <g class="output-lines-3-curved_svg__scheme-dash-animated output" stroke="#605812" stroke-dasharray="0.24 5.6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" mask="url(#output-lines-3-curved_svg__fade_5)">
+    <path d="M -23.356 200.632 L 63.46 200.632 C 73.735 200.632 82.87 197.271 86.18 192.271 L 107.778 159.654 C 111.088 154.655 120.223 151.293 130.498 151.293 L 152.644 151.293 M -23.356 225.302 L 63.415 225.302 C 73.712 225.302 82.862 228.677 86.155 233.692 L 107.542 266.251 C 110.835 271.265 119.984 274.641 130.281 274.641 L 152.644 274.641"/>
+    <path d="M-24 80h176M-24 340h176" stroke="transparent"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="output-lines-3-curved_svg__gradient_5" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    
+    <mask id="output-lines-3-curved_svg__fade_5" maskContentUnits="objectBoundingBox">
+      <path fill="url(#output-lines-3-curved_svg__gradient_5)" d="M0 0h1v1H0z"/>
+    </mask>
+      
+  </defs>
+</svg>
