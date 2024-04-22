@@ -10,6 +10,21 @@ html * {
 .error-text {
   @apply text-red-500 text-xs ml-0.5 font-medium;
 }
+.video-background {
+  position: fixed; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  /* z-index: -100; */
+  background-size: cover;
+}
+.video-background video {
+  height: 100% ;
+  width: 100%;
+}
 
 #root {
   max-width: 1280px;

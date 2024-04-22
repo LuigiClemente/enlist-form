@@ -33,6 +33,12 @@ import Image from "next/image";
       
     return (
       <div className="h-screen grid place-items-center bg-gray-50">
+        <div className="video-background">
+        <video loop muted autoPlay>
+            <source src="/clouds.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
          <Card placeholder="" color="transparent" shadow={true} className="p-7 bg-white">
            <Typography placeholder="" variant="h4" color="blue-gray">
             <Image className="-ml-2" alt='logo' src={'/logo.webp'} width={150} height={70}></Image>
