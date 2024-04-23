@@ -68,3 +68,75 @@ html * {
 .read-the-docs {
   color: #888;
 }
+
+
+.lang-btn{
+  
+  border-radius: 3px;
+  padding-top: 4px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: scale .1806s cubic-bezier(.04,.04,.12,.96);
+
+
+}
+.light .lang-btn{
+color: black;
+
+}
+.dark .lang-btn{
+color: white;
+
+}
+
+
+.languages-box {
+
+gap: 10px;
+background-color: #f1f1f1;
+padding: 10px;
+border-radius: 10px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+padding: 10px;
+background: white;
+z-index: var(--z-index-popup);
+border-radius: 5px;
+border: 1px solid #cacaca;
+margin-inline-start: 10px;
+}
+.language {
+
+font-size: 20px;
+
+gap:10px;
+display: flex;
+  align-items: center;
+  justify-content: start;
+  min-width: 200px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.language:hover{
+background:#fafafa ;
+}
+.language.selected {
+font-weight: 700;
+background:#fafafa ;
+
+}
+.language svg {
+opacity: 0;
+}
+.language.selected svg {
+opacity: 1;
+}
+.language.selected svg {
+fill: #2ae8d3;
+}
+#react-tiny-popover-container{
+top : 45px !important;
+z-index: 10000;
+}

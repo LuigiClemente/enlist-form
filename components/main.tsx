@@ -6,14 +6,24 @@ import {
     Select,
     Option,
     Button,
+    Textarea,
   } from "@material-tailwind/react";
-  import { useEffect, useState } from "react";
+  import { CiGlobe } from "react-icons/ci";
+import { Popover } from "react-tiny-popover";
+import { languages } from "@/utils/languages";
+  import { startTransition, useEffect, useState } from "react";
   import { useForm, Controller } from "react-hook-form";
   import 'react-phone-number-input/style.css';
+  import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
   import PhoneInput from 'react-phone-number-input';
 import Image from "next/image";
   
   const Main = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [navOpen , setNavOpen] =  useState<boolean>(false);
+    const [isLangBtnHovered , setIsLangBtnHovered] = useState(false);
+    const [langOpen , setLangOpen] =  useState<boolean>(false);
     const [showOtherField, setShowOtherField] = useState(false);
     const {
       control,
@@ -23,13 +33,24 @@ import Image from "next/image";
     } :any= useForm({
       mode: "onTouched",
     });
-  
+    const router = useRouter();
+  const localActive = useLocale();
+  const [selectedLanguage, setSelectedLanguage] = useState(localActive);
+
     const onSubmit = (data:any) => console.log(data);
   
     const handleReferralChange = (value:any) => {
         console.log({value})
         setShowOtherField(value === "Other");
       };
+      const changeLanguage = (langCode : string) => {
+    
+        startTransition(() => {
+          router.replace(`/${langCode}`);
+        });
+     
+      };
+      const t = useTranslations('Index');
       
     return (
       <div className="h-screen grid place-items-center bg-gray-50">
@@ -39,28 +60,64 @@ import Image from "next/image";
             Your browser does not support the video tag.
         </video>
     </div>
-         <Card placeholder="" color="transparent" shadow={true} className="p-7 bg-white">
+         <Card placeholder="" color="transparent" shadow={true} className="p-7  mt-10 bg-white">
+           <div className="flex w-full justify-between items-center">
            <Typography placeholder="" variant="h4" color="blue-gray">
             <Image className="-ml-2" alt='logo' src={'/logo.webp'} width={150} height={70}></Image>
           </Typography>
+          <Popover
+  isOpen={langOpen}
+  
+  positions={['left', 'top']} 
+  padding={10}
+  onClickOutside={() => setLangOpen(false)}
+  content={({ position, nudgedLeft, nudgedTop }) => ( 
+    <div className="languages-box">
+     {languages.map((lang) => (
+            <div
+              key={lang.code}
+              className={`language ${selectedLanguage === lang.code ? 'selected' : ''}`}
+              onClick={() => changeLanguage(lang.code)}
+            >
+              <span>{lang.label}</span>
+              <svg height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg" >
+                <path clipRule="evenodd" d="M20.54 7.225 9.58 18.185l-6.12-6.12 1.415-1.414 4.705 4.706 9.546-9.546z"></path>
+              </svg>
+            </div>
+          ))}
+    
+    
+    </div>
+  )}
+>
+  <div className={`lang-btn relative cursor-pointer ${isLangBtnHovered ? 'hovered' : ''}`} onClick={() => setLangOpen(!langOpen)}>
+  <div className="h-full w-full absolute z-20 cursor-pointer inner-lang-btn"    onMouseEnter={() =>{setIsLangBtnHovered(true)}}
+        onMouseLeave={() => setIsLangBtnHovered(false)} onClick={() => setLangOpen(!langOpen)}>
+
+          </div>
+
+  <CiGlobe color={  "#000000"}/>
+  </div>
+</Popover>
+           </div>
            <Typography placeholder="" color="gray" className="mt-1 font-normal">
-            Fill this form we really want to connect with you.
+            {t('fill_form_to_connect')}
           </Typography>
           <br />
           <form
-            className="mb-4 w-[95vw] max-w-[500px] grid grid-cols-2 gap-6"
+            className="mb-4 w-[95vw] max-w-[600px] grid grid-cols-2 gap-6"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="col-span-2">
               <Controller
                 name="firstName"
                 control={control}
-                rules={{ required: "First name is required" }}
+                rules={{ required:  t('first_name-required') }}
                 render={({ field }) => (
                     <Input  crossOrigin=""
                     size="lg"
                     {...field}
-                    label="First Name"
+                    label= {t('first_name')}
                     error={Boolean(errors?.firstName?.message)}
                   />
                 )}
@@ -73,12 +130,13 @@ import Image from "next/image";
               <Controller
                 name="lastName"
                 control={control}
-                rules={{ required: "Last name is required" }}
+                rules={{ required:  t('last_name-required') }}
+
                 render={({ field }) => (
                    <Input crossOrigin=""
                     size="lg"
                     {...field}
-                    label="Last Name"
+                    label= {t('last_name')}
                     error={Boolean(errors?.lastName?.message)}
                   />
                 )}
@@ -89,13 +147,33 @@ import Image from "next/image";
             </div>
             <div className="col-span-2">
               <Controller
+                name="dateOfBirth"
+                control={control}
+                rules={{ required:  t('Date_of_birth_is_required') }}
+                render={({ field }) => (
+                  <Input
+                  crossOrigin={''}
+                    {...field}
+                    type="date"
+                    label={ t('date_of_birth')}
+                    error={Boolean(errors?.dateOfBirth?.message)}
+                    size="lg"
+                  />
+                )}
+              />
+              {errors?.dateOfBirth?.message && (
+                <span className="error-text">{errors.dateOfBirth.message}</span>
+              )}
+            </div>
+            <div className="col-span-2">
+              <Controller
                 name="country"
                 control={control}
-                rules={{ required: "Country is required" }}
+                rules={{ required:  t('Country_is_required') }}
                 render={({ field }) => (
                    <Select placeholder=""
                     {...field}
-                    label="Select Country"
+                    label={ t('select_country')}
                     error={Boolean(errors?.country?.message)}
                   >
                     <Option value="USA">USA</Option>
@@ -109,14 +187,36 @@ import Image from "next/image";
             </div>
             <div className="col-span-2">
               <Controller
+                name="state"
+                control={control}
+                rules={{ required:  t('state_required') }}
+                render={({ field }) => (
+                  <Select
+                  placeholder=""
+                    {...field}
+                    label={ t('state')}
+                    error={Boolean(errors?.state?.message)}
+                  >
+                    {/* Add state options here */}
+                    <Option value="NY">New York</Option>
+                    <Option value="CA">California</Option>
+                  </Select>
+                )}
+              />
+              {errors?.state?.message && (
+                <span className="error-text">{errors.state.message}</span>
+              )}
+            </div>
+            <div className="col-span-2">
+              <Controller
                 name="city"
                 control={control}
-                rules={{ required: "City is required" }}
+                rules={{ required:  t('city_required') }}
                 render={({ field }) => (
                    <Input crossOrigin=""
                     size="lg"
                     {...field}
-                    label="City"
+                    label={t('city')}
                     error={Boolean(errors?.city?.message)}
                   />
                 )}
@@ -130,7 +230,7 @@ import Image from "next/image";
   name="phoneNumber"
   control={control}
   rules={{ 
-    required: "Phone number is required",
+    required: t('phone_required'),
     pattern: {
       value: /^[0-9]+$/, // Ensures only numbers are entered
       message: "Invalid phone number" // Error message for invalid input
@@ -141,7 +241,7 @@ import Image from "next/image";
     crossOrigin={''}
       {...field}
       type="tel" // Use 'tel' to invoke numeric keyboard on mobile devices
-      label="Phone Number"
+      label={t('phone')}
       error={Boolean(errors?.phoneNumber?.message)}
       size="lg"
     />
@@ -157,12 +257,12 @@ import Image from "next/image";
             <Controller
   name="referralSource"
   control={control}
-  rules={{ required: "This field is required" }}
+  rules={{ required:t('how_did_you_hear_about_us_required') }}
   render={({ field }) => (
     <Select
     placeholder={''}
       {...field}
-      label="How did you hear about us?"
+      label={t('how_did_you_hear_about_us')}
       onChange={(e) => {
         field.onChange(e);
         handleReferralChange(e);
@@ -213,10 +313,29 @@ showOtherField && (
 
 
             </div>
+            <div className="col-span-2">
+              <Controller
+                name="mainMotivation"
+                control={control}
+                rules={{ required: t('main_motivation_required') }}
+                render={({ field }) => (
+                  <Textarea
+                    {...field}
+                    label={t('main_motivation')}
+                    error={Boolean(errors?.mainMotivation?.message)}
+                    size="lg"
+                  />
+                )}
+              />
+              {errors?.mainMotivation?.message && (
+                <span className="error-text">{errors.mainMotivation.message}</span>
+              )}
+            </div>
+
             <div className="col-span-2 grid grid-cols-1 gap-3">
               
  <Button placeholder="" color="black" type="submit" variant="filled">
-Submit
+{t('submit_button')}
 </Button>
 </div>
 </form>
