@@ -4,8 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html * {
-  /* @apply !font-inter; */
+html  {
+ min-height: 100vh;
+ min-width: 100vw;
+ overflow-x: hidden
 }
 .error-text {
   @apply text-red-500 text-xs ml-0.5 font-medium;
@@ -14,16 +16,17 @@ html * {
   position: fixed; 
   right: 0; 
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  min-width: 100vw; 
+  min-height: 100vh;
   width: auto; 
   height: auto;
   /* z-index: -100; */
   background-size: cover;
 }
 .video-background video {
-  height: 100% ;
-  width: 100%;
+  min-width: 100vw; 
+  min-height: 100vh;
+  object-fit: cover;
 }
 
 #root {
@@ -140,3 +143,83 @@ fill: #2ae8d3;
 top : 45px !important;
 z-index: 10000;
 }
+
+
+@media screen and (max-width : 500px) {
+ 
+  .languages-box {
+
+    
+    grid-template-columns: repeat(1, 1fr);
+   
+  }
+  .lang-btn{
+    font-size: 31px;
+  }
+.navigation__button{
+    height: 2.8rem;
+    width: 2.8rem;
+    top : 5.4rem;
+
+  }
+  .navigation__icon{
+   scale: 0.8;
+    margin-top: 1.2rem;
+  }
+  .navigation__background{
+    top : 6rem;
+
+  }
+
+  .menu__icon{
+height: 2.7rem;
+width : 2.7rem;
+  }
+  .menu__icon span:before {
+    width: 1.6rem;
+    left: -1px;
+
+  }
+  .menu__icon span:nth-child(1)::before {
+    transform: translateY(-6px);
+  }
+  .menu__icon span:nth-child(2)::before {
+    transform: translateY(0px);
+  }
+  .hovered-class :nth-child(2) {
+    transform :rotate(-45deg) translateY(-5px)  translateX(3px) !important;
+  }
+  .hovered-class :nth-child(1) {
+    transform :rotate(39deg) translateY(-3px) translateX(-3.5px) !important;
+  }
+
+  .navOpen .transparent-menu {
+    right: 1.3rem !important;
+  }
+  .menu__icon span:before {
+    height: 0.215rem;
+  }
+}
+
+
+
+
+@media  (max-width : 768px){
+  .languages-box {
+
+    
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+  
+  .top-text  , .bottom-text {
+    transform: translateX(-50%) !important;
+  }
+  .transparent-lang ,.transparent-menu , .transparent-logo {
+    display: block;
+  }
+  .hovered-class :nth-child(1)::before, .hovered-class :nth-child(2)::before {
+    left :-0.5px !important;
+  }
+}
+

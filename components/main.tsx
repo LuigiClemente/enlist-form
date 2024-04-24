@@ -60,7 +60,7 @@ import Image from "next/image";
             Your browser does not support the video tag.
         </video>
     </div>
-         <Card placeholder="" color="transparent" shadow={true} className="p-7  mt-10 bg-white">
+         <Card placeholder="" color="transparent" shadow={true} className="p-7 w-[90vw] max-w-[600px] mt-10 bg-white">
            <div className="flex w-full justify-between items-center">
            <Typography placeholder="" variant="h4" color="blue-gray">
             <Image className="-ml-2" alt='logo' src={'/logo.webp'} width={150} height={70}></Image>
@@ -105,7 +105,7 @@ import Image from "next/image";
           </Typography>
           <br />
           <form
-            className="mb-4 w-[95vw] max-w-[600px] grid grid-cols-2 gap-6"
+            className="mb-4  grid grid-cols-2 gap-6"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="col-span-2">
@@ -340,6 +340,9 @@ showOtherField && (
 </div>
 </form>
 </Card>
+<div className="mt-10 opacity-0">
+  .
+  </div>
 </div>
 );
 };
