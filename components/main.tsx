@@ -1,4 +1,15 @@
 'use client';
+
+interface Country {
+  id: number;
+  name: string;
+  translations: {
+      [key: string]: string; // This defines an index signature, allowing any string as a key
+  }
+}
+  
+
+import countriesJson from "./countries.json";
 import {
     Card,
     Input,
@@ -18,13 +29,16 @@ import { languages } from "@/utils/languages";
 import { useRouter } from "next/navigation";
   import PhoneInput from 'react-phone-number-input';
 import Image from "next/image";
-  
+
+
   const Main = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [navOpen , setNavOpen] =  useState<boolean>(false);
     const [isLangBtnHovered , setIsLangBtnHovered] = useState(false);
     const [langOpen , setLangOpen] =  useState<boolean>(false);
     const [showOtherField, setShowOtherField] = useState(false);
+    const countries : Country[] =  countriesJson as any;
+
     const {
       control,
       handleSubmit,
@@ -166,65 +180,32 @@ import Image from "next/image";
               )}
             </div>
             <div className="col-span-2">
-              <Controller
-                name="country"
-                control={control}
-                rules={{ required:  t('Country_is_required') }}
-                render={({ field }) => (
-                   <Select placeholder=""
-                    {...field}
-                    label={ t('select_country')}
-                    error={Boolean(errors?.country?.message)}
-                  >
-                    <Option value="USA">USA</Option>
-                    <Option value="Canada">Canada</Option>
-                  </Select>
-                )}
-              />
+            <Controller
+  name="country"
+  control={control}
+  rules={{ required: t('Country_is_required') }}
+  render={({ field }) => (
+    <Select
+    placeholder={''}
+      {...field}
+      label={t('select_country')}
+      error={Boolean(errors?.country?.message)}
+    >
+      {countries.map((country) => (
+        <Option key={country.id} value={country.name}>
+          {localActive && country.translations[localActive] ? country.translations[localActive] : country.name}
+        </Option>
+      ))}
+    </Select>
+  )}
+/>
+
               {errors?.country?.message && (
                 <span className="error-text">{errors?.country?.message}</span>
               )}
             </div>
-            <div className="col-span-2">
-              <Controller
-                name="state"
-                control={control}
-                rules={{ required:  t('state_required') }}
-                render={({ field }) => (
-                  <Select
-                  placeholder=""
-                    {...field}
-                    label={ t('state')}
-                    error={Boolean(errors?.state?.message)}
-                  >
-                    {/* Add state options here */}
-                    <Option value="NY">New York</Option>
-                    <Option value="CA">California</Option>
-                  </Select>
-                )}
-              />
-              {errors?.state?.message && (
-                <span className="error-text">{errors.state.message}</span>
-              )}
-            </div>
-            <div className="col-span-2">
-              <Controller
-                name="city"
-                control={control}
-                rules={{ required:  t('city_required') }}
-                render={({ field }) => (
-                   <Input crossOrigin=""
-                    size="lg"
-                    {...field}
-                    label={t('city')}
-                    error={Boolean(errors?.city?.message)}
-                  />
-                )}
-              />
-              {errors?.city?.message && (
-                <span className="error-text">{errors?.city?.message}</span>
-              )}
-            </div>
+            
+         
             <div className="col-span-2">
             <Controller
   name="phoneNumber"
