@@ -104,7 +104,7 @@ import Image from "next/image";
     </div>
   )}
 >
-  <div className={`lang-btn relative cursor-pointer ${isLangBtnHovered ? 'hovered' : ''}`} onClick={() => setLangOpen(!langOpen)}>
+  <div className={`lang-btn relative cursor-pointer ${isLangBtnHovered ? 'hovered' : ''} hover:scale-[1.15] transition-all duration-300`} onClick={() => setLangOpen(!langOpen)}>
   <div className="h-full w-full absolute z-20 cursor-pointer inner-lang-btn"    onMouseEnter={() =>{setIsLangBtnHovered(true)}}
         onMouseLeave={() => setIsLangBtnHovered(false)} onClick={() => setLangOpen(!langOpen)}>
 
@@ -294,7 +294,7 @@ showOtherField && (
 
 
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 why-us">
               <Controller
                 name="mainMotivation"
                 control={control}

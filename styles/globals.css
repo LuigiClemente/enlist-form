@@ -79,7 +79,7 @@ html  {
   padding-top: 4px;
   font-size: 40px;
   cursor: pointer;
-  transition: scale .1806s cubic-bezier(.04,.04,.12,.96);
+  transition: all .1806s cubic-bezier(.04,.04,.12,.96);
 
 
 }
@@ -224,3 +224,9 @@ width : 2.7rem;
 
 
 
+
+
+.why-us label {
+line-height: 1.5 !important;
+top:10px !important;
+}

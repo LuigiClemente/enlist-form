@@ -14,6 +14,10 @@ export default function LocaleLayout({
     return (
         
       <html lang={locale}>
+        <head>
+      <link rel="icon"  type="image/x-icon" href="/falvicon.ico" />
+
+        </head>
         <body><NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider></body>
