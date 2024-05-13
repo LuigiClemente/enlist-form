@@ -11,7 +11,7 @@
 10. Blog Post
 11. Health Fair
 12. Other
-    Please specify)--
+    --(Please specify)--
 
 ### German
 1. Google
