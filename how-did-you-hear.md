@@ -11,7 +11,7 @@
 10. Blog Post
 11. Health Fair
 12. Other
---(please specify)--
+    Please specify)--
 
 ### German
 1. Google
@@ -26,7 +26,7 @@
 10. Blogbeitrag
 11. Gesundheitsmesse
 12. Andere
---(bitte angeben)--
+--(Bitte angeben)--
 
 ### Dutch
 1. Google
@@ -41,7 +41,7 @@
 10. Blogpost
 11. Gezondheidsbeurs
 12. Overige
---(gelieve te specificeren)--
+--(Gelieve te specificeren)--
 
 ### French 
 1. Google
@@ -56,7 +56,7 @@
 10. Article de blog
 11. Salon de santé
 12. Autre
---(veuillez préciser)--
+--(Veuillez préciser)--
 
 ### Spanish 
 1. Google
@@ -71,7 +71,7 @@
 10. Entrada de blog
 11. Feria de salud
 12. Otro
---(especifique)--
+--(Especifique)--
 
 ### Portuguese 
 1. Google
@@ -86,7 +86,7 @@
 10. Post de blog
 11. Feira de saúde
 12. Outro
---(especifique)--
+--(Especifique)--
 
 ### Italian
 1. Google
@@ -101,4 +101,4 @@
 10. Post del blog
 11. Fiera della salute
 12. Altro
---(specificare)--
+--(Specificare)--
