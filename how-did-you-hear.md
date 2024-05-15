@@ -1,3 +1,137 @@
+{
+  "languages": [
+    {
+      "language": "English",
+      "options": [
+        "Google",
+        "TV",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Family or Friends",
+        "Health Professional (e.g., Dietitian, Doctor)",
+        "Podcast",
+        "Blog Post",
+        "Health Fair",
+        "Other"
+      ],
+      "otherPlaceholder": "Please specify"
+    },
+    {
+      "language": "Deutsch",
+      "options": [
+        "Google",
+        "Fernsehen",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Familie oder Freunde",
+        "Gesundheitsfachkraft (z.B. Ernährungsberater, Arzt)",
+        "Podcast",
+        "Blogbeitrag",
+        "Gesundheitsmesse",
+        "Andere"
+      ],
+      "otherPlaceholder": "Bitte angeben"
+    },
+    {
+      "language": "Nederlands",
+      "options": [
+        "Google",
+        "TV",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Familie of Vrienden",
+        "Gezondheidsprofessional (bijv. Diëtist, Dokter)",
+        "Podcast",
+        "Blogpost",
+        "Gezondheidsbeurs",
+        "Overige"
+      ],
+      "otherPlaceholder": "Gelieve te specificeren"
+    },
+    {
+      "language": "Français",
+      "options": [
+        "Google",
+        "Télévision",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Famille ou Amis",
+        "Professionnel de santé (par ex. Diététicien, Médecin)",
+        "Podcast",
+        "Article de blog",
+        "Salon de santé",
+        "Autre"
+      ],
+      "otherPlaceholder": "Veuillez préciser"
+    },
+    {
+      "language": "Español",
+      "options": [
+        "Google",
+        "Televisión",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Familia o Amigos",
+        "Profesional de la salud (p.ej., Dietista, Médico)",
+        "Podcast",
+        "Entrada de blog",
+        "Feria de salud",
+        "Otro"
+      ],
+      "otherPlaceholder": "Especifique"
+    },
+    {
+      "language": "Português",
+      "options": [
+        "Google",
+        "Televisão",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Família ou Amigos",
+        "Profissional de saúde (ex.: Dietista, Médico)",
+        "Podcast",
+        "Post de blog",
+        "Feira de saúde",
+        "Outro"
+      ],
+      "otherPlaceholder": "Especifique"
+    },
+    {
+      "language": "Italiano",
+      "options": [
+        "Google",
+        "TV",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Famiglia o Amici",
+        "Professionista della salute (es. Dietista, Medico)",
+        "Podcast",
+        "Post del blog",
+        "Fiera della salute",
+        "Altro"
+      ],
+      "otherPlaceholder": "Specificare"
+    }
+  ]
+}
+
+
+
+
 ### English
 1. Google
 2. TV
