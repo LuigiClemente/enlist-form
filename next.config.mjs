@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    assetPrefix: 'https://enlist-form.gutricious.com/'
 };
 
 export default withNextIntl(nextConfig);
