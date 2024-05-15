@@ -163,7 +163,7 @@ const Main = () => {
       <Card placeholder="" color="transparent" shadow={true} className="p-7 w-[90vw] max-w-[600px] mt-10 bg-white">
         <div className="flex w-full justify-between items-center">
           <Typography placeholder="" variant="h4" color="blue-gray">
-            <Image className="-ml-2" alt='logo' src={'https://res.cloudinary.com/dru0isacu/image/upload/v1715804980/gutricious/logo_dfqrwd.webp'} width={150} height={70}></Image>
+            <Image className="-ml-2" alt='logo' src="https://res.cloudinary.com/dru0isacu/image/upload/v1715804980/gutricious/logo_dfqrwd.webp" width={150} height={70}></Image>
           </Typography>
           <Popover
             isOpen={langOpen}
