@@ -156,14 +156,14 @@ const Main = () => {
     <div className="h-screen grid place-items-center bg-gray-50">
       <div className="video-background">
         <video loop muted autoPlay>
-          <source src="/clouds.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dru0isacu/video/upload/v1715804979/gutricious/clouds_c3rd6k.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <Card placeholder="" color="transparent" shadow={true} className="p-7 w-[90vw] max-w-[600px] mt-10 bg-white">
         <div className="flex w-full justify-between items-center">
           <Typography placeholder="" variant="h4" color="blue-gray">
-            <Image className="-ml-2" alt='logo' src={'/logo.webp'} width={150} height={70}></Image>
+            <Image className="-ml-2" alt='logo' src={'https://res.cloudinary.com/dru0isacu/image/upload/v1715804980/gutricious/logo_dfqrwd.webp'} width={150} height={70}></Image>
           </Typography>
           <Popover
             isOpen={langOpen}
