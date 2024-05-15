@@ -139,6 +139,7 @@
     "how_did_you_hear_about_us_required": "Dieses Feld ist erforderlich",
     "main_motivation": " Was ist Ihre Hauptmotivation, personalisierte Ernährung für sich selbst zu nutzen?",
     "main_motivation_required": "Dieses Feld ist erforderlich",
-    "submit_button": "einreichen"
+    "submit_button": "einreichen",
+    "otherPlaceholder": "Bitte angeben"
   }
 }

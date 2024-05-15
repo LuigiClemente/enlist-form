@@ -140,6 +140,7 @@
     "how_did_you_hear_about_us_required": "Este campo es obligatorio",
     "main_motivation": "¿Cuál es su principal motivación para usar nutrición personalizada para usted mismo?",
     "main_motivation_required": "Este campo es obligatorio",
-    "submit_button": "entregar"
+    "submit_button": "entregar",
+    "otherPlaceholder": "Especifique"
   }
 }

@@ -1,8 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@200;300;400;500;600;800&display=swap");
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('/assets/font/CeraProBlack.otf');
+  font-weight: 900; /* Black weight */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('/assets/font/CeraProBold.otf');
+  font-weight: bold; /* Bold weight */
+  font-style: normal;
+}
+
+
+
+/* @font-face {
+  font-family: "CeraPro";
+  src: url('/assets/font/CeraProMedium.otf');
+  font-weight: 500; 
+  font-style: normal;
+} */
+@font-face {
+  font-family: "CeraPro";
+  src: url('/assets/font/CeraPro-Regular-test.ttf');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura";
+  src: url('/assets/font/FuturaBold.otf');
+  font-weight: 700; 
+  font-style: normal;
+}
+@font-face {
+  font-family: "KingsCaslon";
+  src: url('/assets/font/KingsCaslon_Trial_Bd.ttf');
+  font-weight: 700; 
+  font-style: normal;
+}
+@font-face {
+  font-family: "Univers";
+  src: url('/assets/font/UniversBold.ttf');
+  font-weight: 700; 
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url('/assets/font/CeraProLight.otf');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "CeraPro2";
+  src: url('/assets/font/Cera Pro Regular.otf');
+  
+}
+
+* {
+  font-family: "CeraPro", sans-serif;
+}
 
 html  {
  min-height: 100vh;
@@ -65,7 +133,7 @@ html  {
 }
 
 .card {
-  padding: 2em;
+  padding: 2em; 
 }
 
 .read-the-docs {
@@ -227,6 +295,48 @@ width : 2.7rem;
 
 
 .why-us label {
-line-height: 1.5 !important;
-top:10px !important;
+  line-height: 1.5 !important;
+  top: 10px !important;
+  
 }
+.why-us label span {
+  display: none;
+}
+.why-us:focus-within label {
+  top: -7px !important; /* Remove the top spacing when in focus */
+}
+.why-us textarea:valid+label {
+  top: -7px !important; /* Remove the top spacing when in focus */
+}
+@media screen  and (max-width : 600px){
+  .why-us textarea {
+    padding-top: 25px;
+  }
+}
+
+.btn-primary {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  background: #2ae8d3;
+  border: 1px solid white;
+
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+color : #05403a;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+color : #453f0a;
+
+  background-color: #f8e43f;
+}
+

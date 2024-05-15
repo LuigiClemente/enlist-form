@@ -12,6 +12,11 @@ const config: Config = {
       inter:['Inter', 'sans-serif']
     },
     extend: {
+      colors: {
+        blueGray: {
+          700: '#58626C'  // New color value for blue-gray-700
+        }
+      },
     },
   },
   

@@ -139,6 +139,7 @@
     "how_did_you_hear_about_us_required": "This field is required",
     "main_motivation": "What is your main motivation to use personalized nutrition for yourself?",
     "main_motivation_required": "This field is required",
-    "submit_button": "submit"
+    "submit_button": "submit",
+    "otherPlaceholder": "Please specify"
   }
 }

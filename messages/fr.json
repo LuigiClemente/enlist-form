@@ -141,6 +141,7 @@
     "how_did_you_hear_about_us_required": "Ce champ est requis",
     "main_motivation": "Quelle est votre principale motivation pour utiliser une nutrition personnalisée pour vous-même ?",
     "main_motivation_required": "Ce champ est requis",
-    "submit_button": "soumettre"
+    "submit_button": "soumettre",
+    "otherPlaceholder": "Veuillez préciser"
   }
 }

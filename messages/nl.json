@@ -141,6 +141,7 @@
     "how_did_you_hear_about_us_required": "Dit veld is vereist",
     "main_motivation": "Wat is uw belangrijkste motivatie om gepersonaliseerde voeding voor uzelf te gebruiken?",
     "main_motivation_required": "Dit veld is vereist",
-    "submit_button": "indienen"
+    "submit_button": "indienen",
+    "otherPlaceholder": "Gelieve te specificeren"
   }
 }

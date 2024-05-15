@@ -33,13 +33,50 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 const Main = () => {
+  const referralOptions:any = {
+    en: [
+      "Google", "TV", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Family or Friends", "Health Professional (e.g., Dietitian, Doctor)",
+      "Podcast", "Blog Post", "Health Fair", "Other"
+    ],
+    de: [
+      "Google", "Fernsehen", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Familie oder Freunde", "Gesundheitsfachkraft (z.B. Ernährungsberater, Arzt)",
+      "Podcast", "Blogbeitrag", "Gesundheitsmesse", "Andere"
+    ],
+    nl: [
+      "Google", "TV", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Familie of Vrienden", "Gezondheidsprofessional (bijv. Diëtist, Dokter)",
+      "Podcast", "Blogpost", "Gezondheidsbeurs", "Overige"
+    ],
+    fr: [
+      "Google", "Télévision", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Famille ou Amis", "Professionnel de santé (par ex. Diététicien, Médecin)",
+      "Podcast", "Article de blog", "Salon de santé", "Autre"
+    ],
+    es: [
+      "Google", "Televisión", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Familia o Amigos", "Profesional de la salud (p.ej., Dietista, Médico)",
+      "Podcast", "Entrada de blog", "Feria de salud", "Otro"
+    ],
+    pt: [
+      "Google", "Televisão", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Família ou Amigos", "Profissional de saúde (ex.: Dietista, Médico)",
+      "Podcast", "Post de blog", "Feira de saúde", "Outro"
+    ],
+    it: [
+      "Google", "TV", "Facebook", "Instagram", "TikTok", "YouTube",
+      "Famiglia o Amici", "Professionista della salute (es. Dietista, Medico)",
+      "Podcast", "Post del blog", "Fiera della salute", "Altro"
+    ]
+  };
+  
   const [isHovered, setIsHovered] = useState(false);
   const [navOpen, setNavOpen] = useState<boolean>(false);
   const [isLangBtnHovered, setIsLangBtnHovered] = useState(false);
   const [langOpen, setLangOpen] = useState<boolean>(false);
   const [showOtherField, setShowOtherField] = useState(false);
   const countries: Country[] = countriesJson as any;
-
   const {
     control,
     handleSubmit,
@@ -79,7 +116,7 @@ const Main = () => {
         }
       })
       if (res.status === 201) {
-        toast.success("Your form has been submitted successfully.")
+        
         reset();
       }
     } catch (e: any) {
@@ -89,9 +126,22 @@ const Main = () => {
     }
   };
 
-  const handleReferralChange = (value: any) => {
-    setShowOtherField(value === "Other");
+  const handleReferralChange = (value: string) => {
+    // List of all translations for "Other" across different languages
+    const otherOptions = [
+      "Other",   // English
+      "Andere",  // German
+      "Overige", // Dutch
+      "Autre",   // French
+      "Otro",    // Spanish
+      "Outro",   // Portuguese
+      "Altro"    // Italian
+    ];
+  
+    // Show the additional input field if the selected value is any "Other" variant
+    setShowOtherField(otherOptions.includes(value));
   };
+  
   const changeLanguage = (langCode: string) => {
 
     startTransition(() => {
@@ -100,6 +150,7 @@ const Main = () => {
 
   };
   const t = useTranslations('Index');
+  
 
   return (
     <div className="h-screen grid place-items-center bg-gray-50">
@@ -146,7 +197,7 @@ const Main = () => {
             </div>
           </Popover>
         </div>
-        <Typography placeholder="" color="gray" className="mt-1 font-normal">
+        <Typography placeholder=""  className="mt-1 font-normal text-blue-gray-700">
           {t('fill_form_to_connect')}
         </Typography>
         <br />
@@ -266,66 +317,66 @@ const Main = () => {
 
           </div>
           <div className="col-span-2">
+        <Controller
+          name="referralSource"
+          control={control}
+          rules={{ required: t('how_did_you_hear_about_us_required') }}
+          render={({ field }) => (
+            <Select
+              placeholder=""
+              {...field}
+              label={t('how_did_you_hear_about_us')}
+              onChange={(e:any) => {
+                field.onChange(e);
+                handleReferralChange(e);
+              }}
+              error={Boolean(errors?.referralSource?.message)}
+            >
+              {referralOptions[selectedLanguage].map((option:any, index:any) => (
+                <Option key={index} value={option}>
+                  {option}
+                </Option>
+              ))}
+            </Select>
+          )}
+        />
+        {errors?.referralSource?.message && (
+          <span className="error-text">{errors?.referralSource?.message}</span>
+        )}
+        {showOtherField && (
+          <>
+            <div className="my-5"></div>
             <Controller
-              name="referralSource"
+              name="otherReferralSource"
               control={control}
-              rules={{ required: t('how_did_you_hear_about_us_required') }}
+              rules={{ required: t('otherPlaceholder') }}
               render={({ field }) => (
-                <Select
-                  placeholder={''}
+                <Input
+                crossOrigin={''}
                   {...field}
-                  label={t('how_did_you_hear_about_us')}
-                  onChange={(e) => {
-                    field.onChange(e);
-                    handleReferralChange(e);
-                  }}
-                  error={Boolean(errors?.referralSource?.message)}
-                >
-                  <Option value="Internet">Internet</Option>
-                  <Option value="Friend">Friend</Option>
-                  <Option value="Other">Other</Option>
-                </Select>
+                  label={t('otherPlaceholder')}
+                  size="lg"
+                  error={Boolean(errors?.otherReferralSource?.message)}
+                />
               )}
             />
-
-            {errors?.referralSource?.message && (
-              <span className="error-text">{errors?.referralSource.message}</span>
-            )}
-
-            {
-              showOtherField && (
-                <>
-                  <div className="my-5">
-                  </div>
-                  <Controller
-                    name="otherReferralSource"
-                    control={control}
-                    rules={{ required: "Please specify how you heard about us" }}
-                    render={({ field }) => (
-                      <Input
-                        crossOrigin={''}
-                        {...field}
-                        label="Please specify"
-                        size="lg"
-                        error={Boolean(errors?.otherReferralSource?.message)}
-                      />
-                    )}
-                  /></>
-              )}
-
-
             {errors?.otherReferralSource?.message && (
               <span className="error-text">{errors?.otherReferralSource.message}</span>
             )}
-          </div>
-          <div className="col-span-2">
+          </>
+        )}
+      </div>
+          <div className="col-span-2 why-us">
             <Controller
               name="mainMotivation"
               control={control}
+              
               rules={{ required: t('main_motivation_required') }}
               render={({ field }) => (
                 <Textarea
+
                   {...field}
+                  required
                   label={t('main_motivation')}
                   error={Boolean(errors?.mainMotivation?.message)}
                   size="lg"
@@ -338,9 +389,9 @@ const Main = () => {
           </div>
 
           <div className="col-span-2 grid grid-cols-1 gap-3">
-            <Button placeholder="" color="black" type="submit" variant="filled">
+            <button  color="black" type="submit" className="btn-primary">
               {t('submit_button')}
-            </Button>
+            </button>
           </div>
         </form>
       </Card>
