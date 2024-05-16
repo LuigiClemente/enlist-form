@@ -118,11 +118,14 @@ const Main = () => {
       if (res.status === 201) {
         
         reset();
+        
       }
     } catch (e: any) {
       console.log(e)
       reset();
-      toast.success("Your form has been submitted successfully.")
+    
+    }finally{
+      router.push('https://gutricious.com/home?showMarketForm=true');
     }
   };
 
