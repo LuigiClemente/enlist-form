@@ -4,7 +4,6 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/enlist-form',
     assetPrefix: 'https://enlist-form.gutricious.com/',
     images: {
         remotePatterns: [
