@@ -3,195 +3,143 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email Template</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      var _paq = (window._paq = window._paq || []);
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "//matomo.gutricious.com/";
-        _paq.push(["setTrackerUrl", u + "matomo.php"]);
-        _paq.push(["setSiteId", "1"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src = u + "matomo.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f6b9ae;
-        font-family: "Cera Pro", Open Sans, Lato, Roboto, Montserrat, Raleway, sans-serif;
-      }
-      td {
-        padding: 0px;
-        padding-bottom: 10px;
-      }
-      table {
-        border-spacing: 0;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f6b9ae;
+      color: black;
+      font-family: "Cera Pro", Open Sans, Lato, Roboto, Montserrat, Raleway, sans-serif;
+    }
+
+    td {
+      padding: 0px;
+      padding-bottom: 10px;
+    }
+
+    table {
+      border-spacing: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 32px auto;
+      background-color: #f6b9ae;
+      padding: 52px;
+      border-radius: 5px;
+    }
+
+    .header {
+      text-align: left;
+      padding-bottom: 40px;
+    }
+
+    .logo {
+      max-width: 120px;
+      height: auto;
+    }
+
+    .heading {
+      font-size: 24px;
+      color: black;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.5;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: black;
+      padding-top: 20px;
+    }
+
+    .footer-logo {
+      max-width: 84px;
+      height: auto;
+    }
+
+    h1,
+    h2 {
+      margin: 0px;
+    }
+
+    a {
+      color: #8250fb;
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 600px) {
       .container {
-        max-width: 600px;
-        margin: 32px auto;
-        background-color: #ffffff;
-        padding: 52px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100% !important;
+        padding: 20px !important;
       }
-      .header {
-        text-align: left;
-        padding-bottom: 40px;
-      }
-      .logo {
-        max-width: 120px;
-        height: auto;
-      }
-      .heading {
-        font-size: 24px;
-        color: #333333;
-      }
-      .content {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #555555;
-        margin-bottom: 20px;
-      }
-      .footer {
-        text-align: center;
-        font-size: 14px;
-        color: #888888;
-        padding-top: 20px;
-        border-top: 1px solid #dddddd;
-      }
-      .footer-logo {
-        max-width: 84px; /* 40% larger than 60px */
-        height: auto;
-      }
-      h1,
-      h2 {
-        margin: 0px;
-      }
-      a {
-        color: #2ae8d3;
-        text-decoration: none;
-      }
-      @media only screen and (max-width: 600px) {
-        .container {
-          width: 100% !important;
-          padding: 20px !important;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <table
-      width="100%"
-      border="0"
-      cellspacing="0"
-      cellpadding="0"
-      bgcolor="#f6b9ae"
-    >
-      <tr>
-        <td align="center">
-          <table
-            class="container"
-            width="600"
-            border="0"
-            cellspacing="0"
-            cellpadding="52"
-          >
-            <tr>
-              <td class="header" align="center">
-                <img
+    }
+  </style>
+</head>
+
+<body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f6b9ae">
+    <tr>
+      <td align="center">
+        <table class="container" width="600" border="0" cellspacing="0" cellpadding="52">
+          <tr>
+            <td align="left">
+              <h1 class="heading">Welcome to Gutricious!</h1>
+            </td>
+          </tr>
+          <tr>
+            <td class="content">
+              <p>Thank you for enlisting in Gutricious' personalised nutrition and wellness programme. You're almost
+                there — just one more step to secure your place!</p>
+              <p><b>Reserve Your Spot Now!</b></p>
+              <p><b><a href="https://gutricious.com/enlist-form?email={contactfield=email}"
+                    style="text-decoration: underline;">Complete Your Registration Here</a></b></p>
+              <p>Please click the link above to fill out our registration form. Remember, our spots are limited and they
+                are filling up quickly!</p>
+              <p><b>Why Choose Us?</b></p>
+              <ul>
+                <li>Customised nutrition plans based on the latest science</li>
+                <li>Exclusive access to our advanced health tracking tools</li>
+                <li>Continuous support from our team of nutrition experts</li>
+              </ul>
+              <p>Should you have any questions or require assistance, please don't hesitate to contact our support team
+                at <a href="mailto:support@gutricious.com"
+                  style="text-decoration: underline;">support@gutricious.com</a>.</p>
+              <p>We're thrilled to welcome you into our community of health enthusiasts!</p>
+              <p>Warm regards,</p>
+              <p>The Gutricious Team</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="footer" align="center">
+              <img
                   src="https://i.ibb.co/WfFVr0x/Gutricious-logos-black-1.png"
-                  alt="Logo"
-                  class="logo"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td align="left">
-                <h1 class="heading">Welcome to Gutricious!</h1>
-              </td>
-            </tr>
-            <tr>
-              <td class="content">
-                <p>
-                  Thank you for enlisting in Gutricious' personalised nutrition
-                  and wellness programme. You're almost there — just one more
-                  step to secure your place!
-                </p>
-                <p><b>Reserve Your Spot Now!</b></p>
-                <p>
-                  <b
-                    ><a
-                      href=`https://gutricious.com/enlist-form?email={contactfield=email}`
-                      style="text-decoration: underline;"
-                      >Complete Your Registration Here</a
-                    ></b
-                  >
-                </p>
-                <p>
-                  Please click the link above to fill out our registration form.
-                  Remember, our spots are limited and they are filling up
-                  quickly!
-                </p>
-                <p><b>Why Choose Us?</b></p>
-                <ul>
-                  <li>
-                    Customised nutrition plans based on the latest science
-                  </li>
-                  <li>
-                    Exclusive access to our advanced health tracking tools
-                  </li>
-                  <li>Continuous support from our team of nutrition experts</li>
-                </ul>
-                <p>
-                  Should you have any questions or require assistance, please
-                  don't hesitate to contact our support team at
-                  <a
-                    href="mailto:support@gutricious.com"
-                    style="text-decoration: underline;"
-                    >support@gutricious.com</a
-                  >.
-                </p>
-                <p>
-                  We're thrilled to welcome you into our community of health
-                  enthusiasts!
-                </p>
-                <p>Warm regards,</p>
-                <p>The Gutricious Team</p>
-              </td>
-            </tr>
-            <tr>
-              <td class="footer" align="center">
-                <img
-                  src="https://i.ibb.co/WfFVr0x/Gutricious-logos-black-1.png"
-                  alt="Gutricious Logo"
+                  alt="gutricious"
                   class="footer-logo"
                 />
                 @2024
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
 </html>
 ```
 
