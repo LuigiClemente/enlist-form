@@ -94,7 +94,7 @@ const Main = () => {
 
   useEffect(() => {
     if (!email) {
-      router.push('https://gutricious.com');
+      router.push('https://gutricious.com/home');
     } else {
       setShowForm(true);
     }
