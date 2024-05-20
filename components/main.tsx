@@ -99,18 +99,18 @@ const Main = () => {
     }
     formData.append("mauticform[first_name]", data.firstName);
     formData.append("mauticform[last_name]", data.lastName);
-    formData.append("mauticform[date_of_birth1]", data.dateOfBirth);
+    formData.append("mauticform[date_of_birth]", data.dateOfBirth);
     formData.append("mauticform[country]", data.country);
     formData.append("mauticform[phone_number]", data.phoneNumber);
-    formData.append("mauticform[referrel_source1]", data.referralSource);
-    formData.append("mauticform[other_referrel_source1]", data.otherReferralSource);
-    formData.append("mauticform[motivation1]", data.mainMotivation);
-    formData.append("mauticform[formId]", "5");
+    formData.append("mauticform[referrel_source]", data.referralSource);
+    formData.append("mauticform[other_referrel_source]", data.otherReferralSource);
+    formData.append("mauticform[motivation]", data.mainMotivation);
+    formData.append("mauticform[formId]", "2");
     formData.append("mauticform[messenger]", "1");
-    formData.append("mauticform[formName]", "enlistcontactform");
+    formData.append("mauticform[formName]", "enlistform");
 
     try {
-      const res = await axios.post("https://mautic.gutricious.com/form/submit?formId=5", formData, {
+      const res = await axios.post("https://mautic.gutricious.com/form/submit?formId=2", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
