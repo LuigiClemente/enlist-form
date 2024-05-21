@@ -154,11 +154,27 @@ const Main = () => {
     setShowOtherField(otherOptions.includes(value));
   };
 
+  const languageRoutes: any = {
+    en: "/enlist-form",
+    de: "registrierungsformular",
+    nl: "/inschrijfformulier",
+    fr: "/formulaire-d-inscription",
+    es: "/formulario-de-inscripcion",
+    pt: "/formulario-de-inscricao",
+    it: "/modulo-di-iscrizione"
+  };
+
   const changeLanguage = (langCode: string) => {
 
-    startTransition(() => {
-      router.replace(`/${langCode}`);
-    });
+    const route = languageRoutes[langCode];
+
+    if (route) {
+      setSelectedLanguage(langCode);
+      document.cookie = `NEXT_LOCALE=${langCode}; path=/; max-age=31536000`;
+      const currentParams = email ? `?email=${email}` : "";
+      const newUrl = `${route}${currentParams}`;
+      router.push(newUrl);
+    }
 
   };
   const t = useTranslations('Index');
