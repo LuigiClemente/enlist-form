@@ -1,4 +1,9 @@
 {
+
+  "meta": {
+    "title": "Entdecken Sie die Semantische Ebene von Gutricious: Zugängliche Gesundheitsinnovation",
+    "description": "Entdecken Sie die Semantische Ebene von Gutricious: Gesundheitsinnovationen, die zugänglich sind und Ihr Wohlbefinden durch Spitzentechnologie und individuelle Betreuung verbessern. Erfahren Sie mehr heute!"
+  }, 
   "Index": {
     "subHeading": "Die Wissenschaft zeigt, dass restriktive Diäten nicht funktionieren! Wir lehren dich, personalisierte Mahlzeiten zu erstellen, die deinen einzigartigen Körper und Gesundheitsziele ohne Einschränkungen unterstützen.",
     "starText": "*Illustrative personalisierte Mahlzeitenbewertung von Guticious.",
@@ -139,7 +144,7 @@
     "how_did_you_hear_about_us_required": "Dieses Feld ist erforderlich",
     "main_motivation": " Was ist Ihre Hauptmotivation, personalisierte Ernährung für sich selbst zu nutzen?",
     "main_motivation_required": "Dieses Feld ist erforderlich",
-    "submit_button": "einreichen",
+    "submit_button": "Einreichen",
     "otherPlaceholder": "Bitte angeben"
   }
 }

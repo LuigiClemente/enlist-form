@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Discover Gutricious' Semantic Layer: Transforming Accessible Health Care",
+    "description": "Discover Gutricious' Semantic Layer: Revolutionizing health with accessible innovations. Enhance your well-being with our cutting-edge technology and personalised care. Learn more today!"
+  },
   "Index": {
     "subHeading": "Science shows restrictive diets don't work! Learn how to build personalised meals that support your unique body and health goals without restrictions.",
     "starText": "*Illustrative Gutricious personalised meal score.",
@@ -77,7 +81,7 @@
     "smallCard4HeadingSugar": "Savour the Essence of Natural Sugars",
     "smallCard4DescriptionSugar": "Gutricious uncovers the delicate dance of natural sugars in your diet — efficiently. From fructose to lactose, tap into our rapid insights and savour the sweet essence of each natural type. Enhance your health with the purity of nature's sweetness, all at a pace that keeps up with your life’s tempo.",
     "lowerHeadingMicrobiome": "Unlock the Power of Your Gut",
-    "lowerDescriptionMicrobiome": "Elevate your wellness journey with our precise Microbiome Analysis. Delve into a personalized approach that turns gut health into a cornerstone of vitality. With Gutricious, harness the dynamic ecosystem within you for a life of enhanced wellbeing.",
+    "lowerDescriptionMicrobiome": "Elevate your wellness journey with our precise Microbiome Analysis. Delve into a personalised approach that turns gut health into a cornerstone of vitality. With Gutricious, harness the dynamic ecosystem within you for a life of enhanced wellbeing.",
     "lowerHeadingNutrition": "Your Diet, Tailored for You",
     "lowerDescriptionNutrition": "Conclude the guesswork in your nutrition with Gutricious' bespoke Nutritional Profiling. Each bite you take is a step toward your health goals, informed by science and shaped by your unique lifestyle. Revel in the simplicity and effectiveness of eating right, just for you.",
     "lowerHeadingSugar": "Balance Your Energy, optimise Your Life",
@@ -137,9 +141,9 @@
     "phone_required": "Phone number is required",
     "how_did_you_hear_about_us": "How did you hear about us?",
     "how_did_you_hear_about_us_required": "This field is required",
-    "main_motivation": "What is your main motivation to use personalized nutrition for yourself?",
+    "main_motivation": "What is your main motivation to use personalised nutrition for yourself?",
     "main_motivation_required": "This field is required",
-    "submit_button": "submit",
+    "submit_button": "Submit",
     "otherPlaceholder": "Please specify"
   }
 }

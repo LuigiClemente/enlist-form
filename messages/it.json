@@ -1,4 +1,9 @@
 {
+
+  "meta": {
+    "title": "Scopri lo Strato Semantico di Gutricious: Innovazione Accessibile nella Salute",
+    "description": "Esplora lo Strato Semantico di Gutricious: Innovazioni sanitarie accessibili che trasformano il benessere. Tecnologia all'avanguardia e cure personalizzate per te. Scopri di più oggi!"
+  },
   "Index": {
     "subHeading": "La scienza mostra che le diete restrittive non funzionano! Ti insegniamo a costruire pasti personalizzati che supportano il tuo corpo unico e obiettivi di salute senza restrizioni.",
     "starText": "*Punteggio del pasto personalizzato illustrativo di Guticious.",
@@ -140,7 +145,7 @@
     "how_did_you_hear_about_us_required": "Questo campo è obbligatorio",
     "main_motivation": "Qual è la tua principale motivazione per usare la nutrizione personalizzata per te stesso?",
     "main_motivation_required": "Questo campo è obbligatorio",
-    "submit_button": "invia",
+    "submit_button": "Invia",
     "otherPlaceholder": "Specificare"
   }
 }

@@ -1,4 +1,10 @@
+
 {
+
+  "meta": {
+    "title": "Conheça a Camada Semântica da Gutricious: Transformando a Saúde Acessíve",
+    "description": "Conheça a Camada Semântica da Gutricious: Revolucionando a saúde com inovações acessíveis. Melhore seu bem-estar com nossa tecnologia avançada e cuidados personalizados. Saiba mais agora!"
+  },
   "Index": {
     "subHeading": "A ciência mostra que dietas restritivas não funcionam! Ensinamos-te a construir refeições personalizadas que apoiam o teu corpo único e objetivos de saúde sem restrições.",
     "starText": "*Pontuação de refeição personalizada ilustrativa da Guticious.",
@@ -140,7 +146,7 @@
     "how_did_you_hear_about_us_required": "Este campo é obrigatório",
     "main_motivation": "Qual é a sua principal motivação para usar nutrição personalizada para si mesmo?",
     "main_motivation_required": "Este campo é obrigatório",
-    "submit_button": "enviar",
+    "submit_button": "Enviar",
     "otherPlaceholder": "Especifique"
   }
 }

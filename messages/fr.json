@@ -1,4 +1,9 @@
 {
+
+  "meta": {
+    "title": "Découvrez la Couche Sémantique de Gutricious : Innovation Accessible en Santé",
+    "description": "Découvrez la Couche Sémantique de Gutricious : Révolutionner la santé avec des innovations accessibles. Améliorez votre bien-être avec notre technologie de pointe et soins personnalisés. Explorez plus aujourd'hui !"
+  },
   "Index": {
     "subHeading": "La science montre que les régimes restrictifs ne fonctionnent pas Nous vous apprenons à construire des repas personnalisés qui soutiennent votre corps unique et vos objectifs de santé sans restrictions.",
     "starText": "*Score de repas personnalisé illustratif de Guticious.",
@@ -141,7 +146,7 @@
     "how_did_you_hear_about_us_required": "Ce champ est requis",
     "main_motivation": "Quelle est votre principale motivation pour utiliser une nutrition personnalisée pour vous-même ?",
     "main_motivation_required": "Ce champ est requis",
-    "submit_button": "soumettre",
+    "submit_button": "Soumettre",
     "otherPlaceholder": "Veuillez préciser"
   }
 }

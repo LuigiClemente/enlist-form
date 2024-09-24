@@ -6,6 +6,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
 
     assetPrefix: 'https://enlist-form.gutricious.com/',
+    // assetPrefix: 'http://localhost:3000',
+
     images: {
         remotePatterns: [
             {

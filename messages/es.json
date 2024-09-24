@@ -1,4 +1,7 @@
-{
+{  "meta": {
+  "title": "Explora la Capa Semántica de Gutricious: Innovación en Salud Accesible",
+  "description": "Descubre la Capa Semántica de Gutricious: Innovación en salud al alcance de todos. Mejora tu bienestar con nuestra tecnología de punta y atención personalizada. ¡Descubre cómo hoy!"
+},
   "Index": {
     "subHeading": "¡La ciencia muestra que las dietas restrictivas no funcionan! Te enseñamos a construir comidas personalizadas que apoyan tu cuerpo único y objetivos de salud sin restricciones.",
     "starText": "Puntuación de comida personalizada ilustrativa de Guticious.",
@@ -140,7 +143,7 @@
     "how_did_you_hear_about_us_required": "Este campo es obligatorio",
     "main_motivation": "¿Cuál es su principal motivación para usar nutrición personalizada para usted mismo?",
     "main_motivation_required": "Este campo es obligatorio",
-    "submit_button": "entregar",
+    "submit_button": "Entregar",
     "otherPlaceholder": "Especifique"
   }
 }

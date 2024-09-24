@@ -1,4 +1,9 @@
 {
+
+  "meta": {
+    "title": "Ontdek de Semantische Laag van Gutricious: Innovatie in Toegankelijke Gezondheidszorg",
+    "description": "Ontdek de Semantische Laag van Gutricious: Toonaangevende gezondheidsinnovaties binnen handbereik. Verbeter je welzijn met onze geavanceerde technologie en persoonlijke zorg. Ontdek meer nu!"
+  },
   "Index": {
     "subHeading": "De wetenschap toont aan dat restrictieve diëten niet werken! Wij leren je gepersonaliseerde maaltijden te bouwen die jouw unieke lichaam en gezondheidsdoelen ondersteunen zonder beperkingen.",
     "starText": "*Illustratieve gepersonaliseerde maaltijdscore van Guticious.",
@@ -141,7 +146,7 @@
     "how_did_you_hear_about_us_required": "Dit veld is vereist",
     "main_motivation": "Wat is uw belangrijkste motivatie om gepersonaliseerde voeding voor uzelf te gebruiken?",
     "main_motivation_required": "Dit veld is vereist",
-    "submit_button": "indienen",
+    "submit_button": "Indienen",
     "otherPlaceholder": "Gelieve te specificeren"
   }
 }
