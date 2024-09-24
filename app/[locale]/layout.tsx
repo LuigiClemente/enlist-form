@@ -20,7 +20,7 @@ export default function LocaleLayout({
             <title>{t("title")}</title>
             <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dizm8txou/image/upload/v1715953409/about-us/static/favicons/falvicon.ico" />
             <meta name="description" content={t("description")} />
-            {/* <script defer data-domain="home.gutricious.com" src="https://plausible.gutricious.com/js/script.js"></script> */}
+            <script defer data-domain="enlist-form.gutricious.com" src="https://plausible.gutricious.com/js/script.js"></script>
           </head>
       <body><NextIntlClientProvider locale={locale} messages={messages}>
         <ToasterProvider />
