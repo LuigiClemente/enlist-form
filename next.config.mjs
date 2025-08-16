@@ -4,9 +4,8 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
-    assetPrefix: 'https://enlist-form.gutricious.com/',
-    // assetPrefix: 'http://localhost:3000',
+    // Only use assetPrefix in production. In development it breaks local asset loading and can cause a white screen.
+    assetPrefix: process.env.NODE_ENV === 'production' ? 'https://enlist-form.gutricious.com/' : undefined,
 
     images: {
         remotePatterns: [
