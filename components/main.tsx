@@ -93,12 +93,8 @@ const Main = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    if (!email) {
-      router.push('https://gutricious.com/home');
-    } else {
-      setShowForm(true);
-    }
-  }, [email]);
+    setShowForm(true);
+  }, []);
 
   const onSubmit = async (data: any) => {
 
